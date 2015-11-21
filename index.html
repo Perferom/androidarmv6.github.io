@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Android for ARMv6 by androidarmv6</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/androidarmv6">View On GitHub</a></li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Android for ARMv6</h1>
+          <p></p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/androidarmv6">androidarmv6</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h3>
+<a name="welcome-to-androidarmv6-github-site" class="anchor" href="#welcome-to-androidarmv6-github-site"><span class="octicon octicon-link"></span></a>Welcome to AndroidArmv6 GitHub Site.</h3>
+
+<p>Project links:</p>
+
+<ul>
+<li><a href="https://code.google.com/p/androidarmv6/">Bug tracking</a></li>
+<li><a href="http://review.androidarmv6.org/">Gerrit (review)</a></li>
+<li><a href="http://jenkins.androidarmv6.org/">Jenkins (continuous integration server)</a></li>
+<li><a href="https://github.com/androidarmv6">GitHub</a></li>
+</ul><h3>
+<a name="building-android-from-source-code" class="anchor" href="#building-android-from-source-code"><span class="octicon octicon-link"></span></a>Building android from source code</h3>
+
+<pre><code>$ mkdir WORKING_DIR
+$ cd WORKING_DIR
+$ repo init -u git://github.com/androidarmv6/android.git -b cm-11.0
+$ repo sync
+$ sh vendor/cm/get-prebuilts
+$ source build/envsetup.sh
+$ brunch
+$ adb push out/target/product/DEVICENAME/cm-VERSION-DEVICENAME.zip /mnt/sdcard/
+</code></pre>
+
+<h3>
+<a name="uploading-patches" class="anchor" href="#uploading-patches"><span class="octicon octicon-link"></span></a>Uploading patches</h3>
+
+<p>To get started with Android for ARMv6/CyanogenMod, you'll need to get
+familiar with <a href="http://source.android.com/source/developing.html">Git and Repo</a>.</p>
+
+<p>We have a gerrit instance at <a href="http://review.androidarmv6.org">http://review.androidarmv6.org</a>.
+Please register on our gerrit page, don't try to push directly to github.
+Ask an owner for forking stuff for gerrit. We will be happy to oblige.</p>
+
+<p>Gerrit Setup (yes double review.review, change GERRITUSERNAME with your username)</p>
+
+<pre><code>$ git config --global review.review.androidarmv6.org.username GERRITUSERNAME
+$ cd WORKING_DIR
+$ source build/envsetup.sh
+$ cd PROJECT_DIR
+$ repo start cm-11.0 .
+$ ... make changes ...
+$ git add .
+$ git commit -m "Commit message"
+$ repo upload .
+$ repo abandon cm-11.0 .
+</code></pre>
+
+<h3>
+<a name="contact" class="anchor" href="#contact"><span class="octicon octicon-link"></span></a>Contact</h3>
+
+<h4>
+<a name="core-team" class="anchor" href="#core-team"><span class="octicon octicon-link"></span></a>Core Team</h4>
+
+<ul>
+<li><a href="https://github.com/androidmeda">androidmeda</a></li>
+<li><a href="https://github.com/erikcas">erikcas</a></li>
+<li><a href="https://github.com/Rashed97">Rashed97</a></li>
+<li><a href="https://github.com/tilal6991">tilal6991</a></li>
+<li><a href="https://github.com/psyke83">psyke83</a></li>
+</ul><h4>
+<a name="all-members" class="anchor" href="#all-members"><span class="octicon octicon-link"></span></a>All members</h4>
+
+<p><a href="http://github.com/androidarmv6?tab=members">http://github.com/androidarmv6?tab=members</a></p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
